@@ -3,7 +3,7 @@ class LabelsController < ApplicationController
 
     def index 
         labels = Label.where(user_id: @user.id)
-1
+
         render json: LabelSerializer.new(labels, options).serialized_json
     end 
     

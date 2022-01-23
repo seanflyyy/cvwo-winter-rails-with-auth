@@ -3,7 +3,7 @@ class TasksController < ApplicationController
     protect_from_forgery with: :null_session 
 
     def index 
-        tasks = Task.find_by(user_id: session[:user_id])
+        tasks = Task.find_by(user_id: @user.id)
 
         render json: TaskSerializer.new(tasks).serialized_json
     end 
