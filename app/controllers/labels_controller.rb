@@ -2,8 +2,8 @@ class LabelsController < ApplicationController
     protect_from_forgery with: :null_session 
 
     def index 
-        labels = Label.find_by(user_id: session[:user_id])
-
+        labels = Label.where(user_id: @user.id)
+1
         render json: LabelSerializer.new(labels, options).serialized_json
     end 
     

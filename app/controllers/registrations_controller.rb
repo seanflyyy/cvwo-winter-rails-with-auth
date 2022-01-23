@@ -1,4 +1,5 @@
-class RegistrationsController < ApplicationController 
+class RegistrationsController < ApplicationController
+    skip_before_action :require_login 
     def create 
         begin
             user = User.create!(
