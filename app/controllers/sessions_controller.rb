@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController 
     skip_before_action :require_login
+    skip_before_filter :verify_authenticity_token
     include CurrentUserConcern
 
     def create 
