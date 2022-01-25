@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
         credentials: true
     end 
     allow do 
-        origins "https://trusting-hawking-bdc7d2.netlify.app/"
+        origins "https://trusting-hawking-bdc7d2.netlify.app"
         resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head],
         credentials: true
     end 
