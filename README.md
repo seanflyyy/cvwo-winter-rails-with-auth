@@ -6,7 +6,7 @@
 - `cd` to cvwo-winter-rails-with-auth directory 
 - Run `bundle install`
 - `rails db:create`
-- `rails db:migrate'
+- `rails db:migrate`
 - `rails db:seed`
 - Run `rails s` to start the app locally
 - Copy link and paste it into react misc/constants.tsx, database variable
